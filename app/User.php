@@ -19,6 +19,8 @@ class User extends Authenticatable
         'name', 'email', 'password',
     ];
 
+    protected $appends = ['url', 'avatar'];
+
     /**
      * The attributes that should be hidden for arrays.
      *
@@ -36,4 +38,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function todos()
+    {
+        return $this->hasMany(Todo::class);
+    }
+
+    public function getUrlAttribute()
+    {
+        // return route("questions.show", $this->id);
+        return '#';
+    }
+
+
+    public function getAvatarAttribute()
+    {
+        $email = $this->email;
+        $size = 32;
+
+        return "https://www.gravatar.com/avatar/" . md5(strtolower(trim($email))) . "?&s=" . $size;
+    }
 }

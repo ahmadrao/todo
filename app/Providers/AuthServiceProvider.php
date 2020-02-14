@@ -4,6 +4,8 @@ namespace App\Providers;
 
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 use Illuminate\Support\Facades\Gate;
+use App\Todo;
+use App\Policies\TodoPolicy;
 
 class AuthServiceProvider extends ServiceProvider
 {
@@ -13,7 +15,7 @@ class AuthServiceProvider extends ServiceProvider
      * @var array
      */
     protected $policies = [
-        // 'App\Model' => 'App\Policies\ModelPolicy',
+        Todo::class => TodoPolicy::class
     ];
 
     /**
@@ -25,6 +27,12 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        //
+        \Gate::define('update-todo', function ($user, $todo) {
+            return $user->id === $todo->user_id;
+        });
+
+        \Gate::define('delete-todo', function ($user, $todo) {
+            return $user->id === $todo->user_id;
+        });
     }
 }
