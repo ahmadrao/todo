@@ -53948,18 +53948,6 @@ __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_izitoast__WEBPACK_IMPORTED_MODULE_1___default.a);
 vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(_authorization_authorize__WEBPACK_IMPORTED_MODULE_2__["default"]);
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
-/**
- * The following block of code may be used to automatically register your
- * Vue components. It will recursively scan this directory for the Vue
- * components and automatically register them with their "basename".
- *
- * Eg. ./components/ExampleComponent.vue -> <example-component></example-component>
- */
-// const files = require.context('./', true, /\.vue$/i)
-// files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
-// Vue.component("todo-page", require("./pages/TodoPage.vue").default);
-// Vue.component("todos-page", require("./pages/TodosPage.vue").default);
-
 window.VueRouter = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.esm.js")["default"];
 window.VueAxios = __webpack_require__(/*! vue-axios */ "./node_modules/vue-axios/dist/vue-axios.min.js")["default"];
 window.Axios = __webpack_require__(/*! axios */ "./node_modules/axios/index.js")["default"];
@@ -54006,15 +53994,6 @@ var router = new VueRouter({
 new vue__WEBPACK_IMPORTED_MODULE_0___default.a(vue__WEBPACK_IMPORTED_MODULE_0___default.a.util.extend({
   router: router
 }, AppLayout)).$mount("#app");
-/**
- * Next, we will create a fresh Vue application instance and attach it to
- * the page. Then, you may begin adding components to this application
- * or customize the JavaScript scaffolding to fit your unique needs.
- */
-// const app = new Vue({
-//     el: "#app",
-//     router
-// });
 
 /***/ }),
 
