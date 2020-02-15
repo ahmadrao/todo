@@ -2359,6 +2359,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -56694,102 +56697,107 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c("table", { staticClass: "table" }, [
-      _vm._m(0),
-      _vm._v(" "),
-      _c(
-        "tbody",
-        _vm._l(_vm.filteredTodos, function(todo, index) {
-          return _c("tr", { key: todo.id }, [
-            _c("td", [_vm._v(_vm._s(index + 1))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(todo.title))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(todo.body))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(todo.start_date))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(todo.end_date))]),
-            _vm._v(" "),
-            _c(
-              "td",
-              [
-                _c(
-                  "router-link",
-                  {
-                    staticClass: "btn btn-outline-info btn-sm",
-                    attrs: {
-                      to: {
-                        name: "Viewtodo",
-                        params: { id: todo.id }
-                      }
-                    }
-                  },
-                  [
-                    _c("i", {
-                      staticClass: "fa fa-eye",
-                      attrs: { "aria-hidden": "true" }
-                    }),
-                    _vm._v(
-                      "\n                        Show\n                    "
-                    )
-                  ]
-                ),
+    _vm.todos.length
+      ? _c("table", { staticClass: "table" }, [
+          _vm._m(0),
+          _vm._v(" "),
+          _c(
+            "tbody",
+            _vm._l(_vm.filteredTodos, function(todo, index) {
+              return _c("tr", { key: todo.id }, [
+                _c("td", [_vm._v(_vm._s(index + 1))]),
                 _vm._v(" "),
-                _vm.authorize("modify", todo)
-                  ? _c(
+                _c("td", [_vm._v(_vm._s(todo.title))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(todo.body))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(todo.start_date))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(todo.end_date))]),
+                _vm._v(" "),
+                _c(
+                  "td",
+                  [
+                    _c(
                       "router-link",
                       {
-                        staticClass: "btn btn-outline-warning btn-sm",
+                        staticClass: "btn btn-outline-info btn-sm",
                         attrs: {
                           to: {
-                            name: "Edittodo",
+                            name: "Viewtodo",
                             params: { id: todo.id }
                           }
                         }
                       },
                       [
                         _c("i", {
-                          staticClass: "fa fa-pencil",
+                          staticClass: "fa fa-eye",
                           attrs: { "aria-hidden": "true" }
                         }),
                         _vm._v(
-                          "\n                        Edit\n                    "
+                          "\n                        Show\n                    "
                         )
                       ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.authorize("deleteTodo", todo)
-                  ? _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-sm btn-outline-danger",
-                        on: {
-                          click: function($event) {
-                            return _vm.destroy(index)
-                          }
-                        }
-                      },
-                      [
-                        _c("i", {
-                          staticClass: "fa fa-trash-o",
-                          attrs: { "aria-hidden": "true" }
-                        }),
-                        _vm._v(
-                          "\n                        Delete\n                    "
+                    ),
+                    _vm._v(" "),
+                    _vm.authorize("modify", todo)
+                      ? _c(
+                          "router-link",
+                          {
+                            staticClass: "btn btn-outline-warning btn-sm",
+                            attrs: {
+                              to: {
+                                name: "Edittodo",
+                                params: { id: todo.id }
+                              }
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-pencil",
+                              attrs: { "aria-hidden": "true" }
+                            }),
+                            _vm._v(
+                              "\n                        Edit\n                    "
+                            )
+                          ]
                         )
-                      ]
-                    )
-                  : _vm._e()
-              ],
-              1
-            )
-          ])
-        }),
-        0
-      )
-    ])
+                      : _vm._e(),
+                    _vm._v(" "),
+                    _vm.authorize("deleteTodo", todo)
+                      ? _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-sm btn-outline-danger",
+                            on: {
+                              click: function($event) {
+                                return _vm.destroy(index)
+                              }
+                            }
+                          },
+                          [
+                            _c("i", {
+                              staticClass: "fa fa-trash-o",
+                              attrs: { "aria-hidden": "true" }
+                            }),
+                            _vm._v(
+                              "\n                        Delete\n                    "
+                            )
+                          ]
+                        )
+                      : _vm._e()
+                  ],
+                  1
+                )
+              ])
+            }),
+            0
+          )
+        ])
+      : _c("div", { staticClass: "alert alert-warning ml-5" }, [
+          _c("strong", [_vm._v("Sorry")]),
+          _vm._v(" There are no todo available.\n    ")
+        ])
   ])
 }
 var staticRenderFns = [

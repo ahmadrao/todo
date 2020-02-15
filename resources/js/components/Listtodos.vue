@@ -9,7 +9,7 @@
                 Add new Todo
             </router-link>
         </div>
-        <table class="table">
+        <table class="table" v-if="todos.length">
             <thead>
                 <tr>
                     <th>#</th>
@@ -61,6 +61,9 @@
                 </tr>
             </tbody>
         </table>
+        <div class="alert alert-warning ml-5" v-else>
+            <strong>Sorry</strong> There are no todo available.
+        </div>
     </div>
 </template>
 
