@@ -1970,6 +1970,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -56300,7 +56304,10 @@ var render = function() {
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn btn-xs btn-primary", attrs: { type: "submit" } },
+          {
+            staticClass: "btn btn-xs btn-primary",
+            attrs: { type: "submit", disabled: _vm.isInvalid }
+          },
           [_vm._v("\n            Create Todo\n        ")]
         ),
         _vm._v(" "),

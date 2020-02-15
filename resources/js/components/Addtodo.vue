@@ -50,7 +50,11 @@
                     required
                 ></textarea>
             </div>
-            <button type="submit" class="btn btn-xs btn-primary">
+            <button
+                type="submit"
+                class="btn btn-xs btn-primary"
+                :disabled="isInvalid"
+            >
                 Create Todo
             </button>
             <router-link class="btn btn-xs btn-warning" v-bind:to="'/'"
