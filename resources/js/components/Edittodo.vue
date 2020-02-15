@@ -35,7 +35,10 @@ export default {
   methods: {
     updateTodo: function() {
       let uri = "/todo/" + this.$route.params.id;
-      Axios.patch(uri, this.todo).then(response => {
+      Axios.patch(uri, this.todo).then(({ data }) => {
+        this.$toast.success(data.message, "Success", {
+          timeout: 3000
+        });
         this.$router.push({ name: "Listtodos" });
       });
     }

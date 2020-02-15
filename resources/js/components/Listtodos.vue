@@ -26,7 +26,7 @@
           <td>{{ todo.updated_at }}</td>
           <td>
             <router-link
-              class="btn btn-info btn-xs"
+              class="btn btn-outline-info btn-sm"
               v-bind:to="{
                                 name: 'Viewtodo',
                                 params: { id: todo.id }
@@ -37,7 +37,7 @@
             </router-link>
             <router-link
               v-if="authorize('modify', todo)"
-              class="btn btn-warning btn-xs"
+              class="btn btn-outline-warning btn-sm"
               v-bind:to="{
                                 name: 'Edittodo',
                                 params: { id: todo.id }

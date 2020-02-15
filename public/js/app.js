@@ -2114,7 +2114,13 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       var uri = "/todo/" + this.$route.params.id;
-      Axios.patch(uri, this.todo).then(function (response) {
+      Axios.patch(uri, this.todo).then(function (_ref) {
+        var data = _ref.data;
+
+        _this2.$toast.success(data.message, "Success", {
+          timeout: 3000
+        });
+
         _this2.$router.push({
           name: "Listtodos"
         });
@@ -38691,7 +38697,7 @@ var render = function() {
                 _c(
                   "router-link",
                   {
-                    staticClass: "btn btn-info btn-xs",
+                    staticClass: "btn btn-outline-info btn-sm",
                     attrs: {
                       to: {
                         name: "Viewtodo",
@@ -38712,7 +38718,7 @@ var render = function() {
                   ? _c(
                       "router-link",
                       {
-                        staticClass: "btn btn-warning btn-xs",
+                        staticClass: "btn btn-outline-warning btn-sm",
                         attrs: {
                           to: {
                             name: "Edittodo",
