@@ -2,7 +2,7 @@
     <div class="row">
         <div class="pull-right">
             <router-link
-                class="btn btn-xs btn-primary mb-2"
+                class="btn btn-xs btn-outline-primary mb-2"
                 v-bind:to="{ path: '/add-todo' }"
             >
                 <span class="fa fa-plus"></span>

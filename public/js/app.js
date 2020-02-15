@@ -2449,6 +2449,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -56680,7 +56682,7 @@ var render = function() {
         _c(
           "router-link",
           {
-            staticClass: "btn btn-xs btn-primary mb-2",
+            staticClass: "btn btn-xs btn-outline-primary mb-2",
             attrs: { to: { path: "/add-todo" } }
           },
           [
@@ -56836,9 +56838,14 @@ var render = function() {
   return _c(
     "div",
     [
-      _c("span", { staticClass: "glyphicon glyphicon-arrow-left" }),
-      _vm._v(" "),
-      _c("router-link", { attrs: { to: "/" } }, [_vm._v("Back to todo list")]),
+      _c(
+        "router-link",
+        { staticClass: "btn btn-outline-dark", attrs: { to: "/" } },
+        [
+          _c("span", { staticClass: "fa fa-arrow-left mr-1" }),
+          _vm._v("Back to todo\n        list")
+        ]
+      ),
       _vm._v(" "),
       _c("h3", [_vm._v(_vm._s(_vm.todo.title))]),
       _vm._v(" "),

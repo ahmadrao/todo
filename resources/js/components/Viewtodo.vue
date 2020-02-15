@@ -1,7 +1,9 @@
 <template id="todo">
     <div>
-        <span class="glyphicon glyphicon-arrow-left"></span>
-        <router-link v-bind:to="'/'">Back to todo list</router-link>
+        <router-link v-bind:to="'/'" class="btn btn-outline-dark"
+            ><span class="fa fa-arrow-left mr-1"></span>Back to todo
+            list</router-link
+        >
         <h3>{{ todo.title }}</h3>
         <h4>Descritpion :</h4>
         <br />
