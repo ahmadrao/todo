@@ -18,6 +18,8 @@ class CreateTodosTable extends Migration
             $table->string('title');
             $table->text('body');
             $table->bigInteger('user_id')->unsigned();
+            $table->dateTime('start_date');
+            $table->dateTime('end_date');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

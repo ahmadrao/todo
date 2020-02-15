@@ -11,9 +11,9 @@
         <tr>
           <th>#</th>
           <th>Todo Title</th>
-          <th>Todo Body</th>
-          <th>Created At</th>
-          <th>Updated At</th>
+          <th>Todo Descritpion</th>
+          <th>Start Date</th>
+          <th>End Date</th>
           <th>Actions</th>
         </tr>
       </thead>
@@ -22,8 +22,8 @@
           <td>{{ index + 1 }}</td>
           <td>{{ todo.title }}</td>
           <td>{{ todo.body }}</td>
-          <td>{{ todo.created_at }}</td>
-          <td>{{ todo.updated_at }}</td>
+          <td>{{ todo.start_date }}</td>
+          <td>{{ todo.end_date }}</td>
           <td>
             <router-link
               class="btn btn-outline-info btn-sm"

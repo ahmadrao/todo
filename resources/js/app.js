@@ -1,8 +1,4 @@
-/**
- * First we will load all of this project's JavaScript dependencies which
- * includes Vue and other libraries. It is a great starting point when
- * building robust, powerful web applications using Vue and Laravel.
- */
+import moment from "moment";
 
 require("./bootstrap");
 
@@ -15,6 +11,22 @@ Vue.use(VueIziToast);
 Vue.use(Authorization);
 
 window.Vue = require("vue");
+
+Vue.filter("formatDate", function(value) {
+    if (value) {
+        return moment(String(value)).format("MMM DD, YYYY h:mm:ss");
+    }
+});
+
+Vue.filter("two_digits", value => {
+    if (value < 0) {
+        return "00";
+    }
+    if (value.toString().length <= 1) {
+        return `0${value}`;
+    }
+    return value;
+});
 
 window.VueRouter = require("vue-router").default;
 

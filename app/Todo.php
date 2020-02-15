@@ -7,7 +7,7 @@ use Illuminate\Support\Str;
 
 class Todo extends Model
 {
-    protected $fillable = ['title', 'body'];
+    protected $fillable = ['title', 'body', 'start_date', 'end_date'];
 
 
     protected $appends = ['created_date', 'body_html'];

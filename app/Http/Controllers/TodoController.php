@@ -60,7 +60,7 @@ class TodoController extends Controller
      */
     public function store(AskTodoRequest $request, Todo $todo)
     {
-        $request->user()->todos()->create($request->only('title', 'body'));
+        $request->user()->todos()->create($request->only('title', 'body', 'start_date', 'end_date'));
 
         if ($request->expectsJson()) {
             return response()->json([
@@ -112,7 +112,7 @@ class TodoController extends Controller
         if (\Gate::denies('update-todo', $todo)) {
             abort(403, "Access Denied");
         }
-        $todo->update($request->only('title', 'body'));
+        $todo->update($request->only('title', 'body', 'start_date', 'end_date'));
 
         if ($request->expectsJson()) {
             return response()->json([
