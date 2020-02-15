@@ -2356,6 +2356,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -56681,8 +56684,8 @@ var render = function() {
             attrs: { to: { path: "/add-todo" } }
           },
           [
-            _c("span", { staticClass: "glyphicon glyphicon-plus" }),
-            _vm._v("\n      Add new Todo\n    ")
+            _c("span", { staticClass: "fa fa-plus" }),
+            _vm._v("\n            Add new Todo\n        ")
           ]
         )
       ],
@@ -56725,7 +56728,9 @@ var render = function() {
                       staticClass: "fa fa-eye",
                       attrs: { "aria-hidden": "true" }
                     }),
-                    _vm._v("\n            Show\n          ")
+                    _vm._v(
+                      "\n                        Show\n                    "
+                    )
                   ]
                 ),
                 _vm._v(" "),
@@ -56746,7 +56751,9 @@ var render = function() {
                           staticClass: "fa fa-pencil",
                           attrs: { "aria-hidden": "true" }
                         }),
-                        _vm._v("\n            Edit\n          ")
+                        _vm._v(
+                          "\n                        Edit\n                    "
+                        )
                       ]
                     )
                   : _vm._e(),
@@ -56767,7 +56774,9 @@ var render = function() {
                           staticClass: "fa fa-trash-o",
                           attrs: { "aria-hidden": "true" }
                         }),
-                        _vm._v("\n            Delete\n          ")
+                        _vm._v(
+                          "\n                        Delete\n                    "
+                        )
                       ]
                     )
                   : _vm._e()
