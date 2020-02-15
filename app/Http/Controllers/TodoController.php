@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Auth;
 
 class TodoController extends Controller
 {
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+    public function home()
+    {
+        return view('home');
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -21,11 +32,12 @@ class TodoController extends Controller
 
     public function index()
     {
+        // return Todo::orderBy('id', 'DESC')->get();
         $user = auth()->user();
 
-        $todos = Todo::where('user_id', '=', $user->id)->get();
+        return Todo::where('user_id', '=', $user->id)->get();
 
-        return view('home', compact('todos'));
+        // return view('home', compact('todos'));
     }
 
     /**
@@ -35,9 +47,9 @@ class TodoController extends Controller
      */
     public function create()
     {
-        $todo = new Todo();
+        // $todo = new Todo();
 
-        return view('create', compact('todo'));
+        // return view('create', compact('todo'));
     }
 
     /**
@@ -46,9 +58,15 @@ class TodoController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(AskTodoRequest $request)
+    public function store(AskTodoRequest $request, Todo $todo)
     {
         $request->user()->todos()->create($request->only('title', 'body'));
+
+        if ($request->expectsJson()) {
+            return response()->json([
+                'message' => "Your todo has been Added"
+            ]);
+        }
 
         return redirect()->route('home')->with('success', 'Your todo has been submitted');
     }
@@ -59,11 +77,13 @@ class TodoController extends Controller
      * @param  \App\Todo  $todo
      * @return \Illuminate\Http\Response
      */
-    public function show(Todo $todo)
+    public function show($id)
     {
 
         // $todo = Todo::where('slug', $slug)->first();
-        return view('show', compact('todo'));
+        // return view('show', compact('todo'));
+
+        return Todo::find($id);
     }
 
     /**

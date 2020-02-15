@@ -24,10 +24,11 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $user = auth()->user();
+        return view('home');
+        // $user = auth()->user();
 
-        $todos = Todo::where('user_id', '=', $user->id)->get();
+        // return Todo::where('user_id', '=', $user->id)->get();
 
-        return view('home', compact('todos'));
+        // return view('home', compact('todos'));
     }
 }

@@ -17,16 +17,16 @@ class Todo extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function setTitleAttribute($value)
-    {
-        $this->attributes['title'] = $value;
-        $this->attributes['slug'] = Str::slug($value, '-');
-    }
+    // public function setTitleAttribute($value)
+    // {
+    //     $this->attributes['title'] = $value;
+    //     $this->attributes['slug'] = Str::slug($value, '-');
+    // }
 
-    public function getUrlAttribute()
-    {
-        return route("todo.show", $this->slug);
-    }
+    // public function getUrlAttribute()
+    // {
+    //     return route("todo.show", $this->slug);
+    // }
 
     public function getCreatedDateAttribute()
     {
