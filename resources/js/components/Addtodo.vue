@@ -1,5 +1,8 @@
 <template id="add-todo">
     <div>
+        <router-link v-bind:to="'/'" class="btn btn-outline-dark"
+            ><span class="fa fa-arrow-left mr-1"></span>Back to todo list
+        </router-link>
         <h3>Add new todo</h3>
         <form @submit.prevent="create">
             <div class="form-group">

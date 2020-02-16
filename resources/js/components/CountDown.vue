@@ -85,7 +85,7 @@ export default {
 }
 
 .digit {
-    color: #ecf0f1;
+    color: #73d6ef;
     font-size: 130px;
     font-weight: 100;
     font-family: "Roboto", serif;

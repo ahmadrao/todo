@@ -1974,6 +1974,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2238,6 +2241,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -2437,7 +2461,6 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _CountDown_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CountDown.vue */ "./resources/js/components/CountDown.vue");
-//
 //
 //
 //
@@ -7024,7 +7047,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 exports.push([module.i, "@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400|Roboto:100);", ""]);
 
 // module
-exports.push([module.i, ".countdown {\n  display: flex;\n}\n.block {\n  display: flex;\n  flex-direction: column;\n  margin: 20px;\n}\n.text {\n  color: #1abc9c;\n  font-size: 25px;\n  font-family: \"Roboto Condensed\", serif;\n  font-weight: 40;\n  margin-top: 10px;\n  margin-bottom: 10px;\n  text-align: center;\n}\n.digit {\n  color: #ecf0f1;\n  font-size: 130px;\n  font-weight: 100;\n  font-family: \"Roboto\", serif;\n  margin: 10px;\n  text-align: center;\n}", ""]);
+exports.push([module.i, ".countdown {\n  display: flex;\n}\n.block {\n  display: flex;\n  flex-direction: column;\n  margin: 20px;\n}\n.text {\n  color: #1abc9c;\n  font-size: 25px;\n  font-family: \"Roboto Condensed\", serif;\n  font-weight: 40;\n  margin-top: 10px;\n  margin-bottom: 10px;\n  text-align: center;\n}\n.digit {\n  color: #73d6ef;\n  font-size: 130px;\n  font-weight: 100;\n  font-family: \"Roboto\", serif;\n  margin: 10px;\n  text-align: center;\n}", ""]);
 
 // exports
 
@@ -56174,160 +56197,177 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h3", [_vm._v("Add new todo")]),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.create($event)
-          }
-        }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "add-title" } }, [_vm._v("Title")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.title,
-                expression: "title"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { id: "add-title", required: "" },
-            domProps: { value: _vm.title },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.title = $event.target.value
-              }
+  return _c(
+    "div",
+    [
+      _c(
+        "router-link",
+        { staticClass: "btn btn-outline-dark", attrs: { to: "/" } },
+        [
+          _c("span", { staticClass: "fa fa-arrow-left mr-1" }),
+          _vm._v("Back to todo list\n    ")
+        ]
+      ),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Add new todo")]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              return _vm.create($event)
             }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "start_date" } }, [
-                _vm._v("Start Date")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.start_date,
-                    expression: "start_date"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "date",
-                  id: "start_date",
-                  min: "2020-01-01",
-                  max: "2022-12-31"
-                },
-                domProps: { value: _vm.start_date },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.start_date = $event.target.value
-                  }
+          }
+        },
+        [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "add-title" } }, [_vm._v("Title")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.title,
+                  expression: "title"
                 }
-              })
+              ],
+              staticClass: "form-control",
+              attrs: { id: "add-title", required: "" },
+              domProps: { value: _vm.title },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.title = $event.target.value
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "start_date" } }, [
+                  _vm._v("Start Date")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.start_date,
+                      expression: "start_date"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "date",
+                    id: "start_date",
+                    min: "2020-01-01",
+                    max: "2022-12-31"
+                  },
+                  domProps: { value: _vm.start_date },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.start_date = $event.target.value
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "end_date" } }, [
+                  _vm._v("End Date")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.end_date,
+                      expression: "end_date"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "date",
+                    id: "end_date",
+                    min: "2020-01-01",
+                    max: "2022-12-31"
+                  },
+                  domProps: { value: _vm.end_date },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.end_date = $event.target.value
+                    }
+                  }
+                })
+              ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "end_date" } }, [_vm._v("End Date")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.end_date,
-                    expression: "end_date"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "date",
-                  id: "end_date",
-                  min: "2020-01-01",
-                  max: "2022-12-31"
-                },
-                domProps: { value: _vm.end_date },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.end_date = $event.target.value
-                  }
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "add-body" } }, [
+              _vm._v("Descritpion")
+            ]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.body,
+                  expression: "body"
                 }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "add-body" } }, [_vm._v("Descritpion")]),
+              ],
+              staticClass: "form-control",
+              attrs: { rows: "10", required: "" },
+              domProps: { value: _vm.body },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.body = $event.target.value
+                }
+              }
+            })
+          ]),
           _vm._v(" "),
-          _c("textarea", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.body,
-                expression: "body"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { rows: "10", required: "" },
-            domProps: { value: _vm.body },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.body = $event.target.value
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-xs btn-primary",
-            attrs: { type: "submit", disabled: _vm.isInvalid }
-          },
-          [_vm._v("\n            Create Todo\n        ")]
-        ),
-        _vm._v(" "),
-        _c(
-          "router-link",
-          { staticClass: "btn btn-xs btn-warning", attrs: { to: "/" } },
-          [_vm._v("Cancel")]
-        )
-      ],
-      1
-    )
-  ])
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-xs btn-primary",
+              attrs: { type: "submit", disabled: _vm.isInvalid }
+            },
+            [_vm._v("\n            Create Todo\n        ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { staticClass: "btn btn-xs btn-warning", attrs: { to: "/" } },
+            [_vm._v("Cancel")]
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -56500,160 +56540,177 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("h3", [_vm._v("Add new Todo")]),
-    _vm._v(" "),
-    _c(
-      "form",
-      {
-        on: {
-          submit: function($event) {
-            $event.preventDefault()
-            return _vm.updateTodo($event)
-          }
-        }
-      },
-      [
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "edit-title" } }, [_vm._v("Title")]),
-          _vm._v(" "),
-          _c("input", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.todo.title,
-                expression: "todo.title"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { id: "edit-title", required: "" },
-            domProps: { value: _vm.todo.title },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.todo, "title", $event.target.value)
-              }
+  return _c(
+    "div",
+    [
+      _c(
+        "router-link",
+        { staticClass: "btn btn-outline-dark", attrs: { to: "/" } },
+        [
+          _c("span", { staticClass: "fa fa-arrow-left mr-1" }),
+          _vm._v("Back to todo list\n    ")
+        ]
+      ),
+      _vm._v(" "),
+      _c("h3", [_vm._v("Add new Todo")]),
+      _vm._v(" "),
+      _c(
+        "form",
+        {
+          on: {
+            submit: function($event) {
+              $event.preventDefault()
+              return _vm.updateTodo($event)
             }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "row" }, [
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "start_date" } }, [
-                _vm._v("Start Date")
-              ]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.todo.start_date,
-                    expression: "todo.start_date"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "date",
-                  id: "start_date",
-                  min: "2020-01-01",
-                  max: "2022-12-31"
-                },
-                domProps: { value: _vm.todo.start_date },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.todo, "start_date", $event.target.value)
-                  }
+          }
+        },
+        [
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "edit-title" } }, [_vm._v("Title")]),
+            _vm._v(" "),
+            _c("input", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.todo.title,
+                  expression: "todo.title"
                 }
-              })
+              ],
+              staticClass: "form-control",
+              attrs: { id: "edit-title", required: "" },
+              domProps: { value: _vm.todo.title },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.todo, "title", $event.target.value)
+                }
+              }
+            })
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "start_date" } }, [
+                  _vm._v("Start Date")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.todo.start_date,
+                      expression: "todo.start_date"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "date",
+                    id: "start_date",
+                    min: "2020-01-01",
+                    max: "2022-12-31"
+                  },
+                  domProps: { value: _vm.todo.start_date },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.todo, "start_date", $event.target.value)
+                    }
+                  }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-6" }, [
+              _c("div", { staticClass: "form-group" }, [
+                _c("label", { attrs: { for: "end_date" } }, [
+                  _vm._v("End Date")
+                ]),
+                _vm._v(" "),
+                _c("input", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.todo.end_date,
+                      expression: "todo.end_date"
+                    }
+                  ],
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "date",
+                    id: "end_date",
+                    min: "2020-01-01",
+                    max: "2022-12-31"
+                  },
+                  domProps: { value: _vm.todo.end_date },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.todo, "end_date", $event.target.value)
+                    }
+                  }
+                })
+              ])
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6" }, [
-            _c("div", { staticClass: "form-group" }, [
-              _c("label", { attrs: { for: "end_date" } }, [_vm._v("End Date")]),
-              _vm._v(" "),
-              _c("input", {
-                directives: [
-                  {
-                    name: "model",
-                    rawName: "v-model",
-                    value: _vm.todo.end_date,
-                    expression: "todo.end_date"
-                  }
-                ],
-                staticClass: "form-control",
-                attrs: {
-                  type: "date",
-                  id: "end_date",
-                  min: "2020-01-01",
-                  max: "2022-12-31"
-                },
-                domProps: { value: _vm.todo.end_date },
-                on: {
-                  input: function($event) {
-                    if ($event.target.composing) {
-                      return
-                    }
-                    _vm.$set(_vm.todo, "end_date", $event.target.value)
-                  }
+          _c("div", { staticClass: "form-group" }, [
+            _c("label", { attrs: { for: "edit-body" } }, [
+              _vm._v("Descritpion")
+            ]),
+            _vm._v(" "),
+            _c("textarea", {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.todo.body,
+                  expression: "todo.body"
                 }
-              })
-            ])
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group" }, [
-          _c("label", { attrs: { for: "edit-body" } }, [_vm._v("Descritpion")]),
+              ],
+              staticClass: "form-control",
+              attrs: { rows: "10", required: "" },
+              domProps: { value: _vm.todo.body },
+              on: {
+                input: function($event) {
+                  if ($event.target.composing) {
+                    return
+                  }
+                  _vm.$set(_vm.todo, "body", $event.target.value)
+                }
+              }
+            })
+          ]),
           _vm._v(" "),
-          _c("textarea", {
-            directives: [
-              {
-                name: "model",
-                rawName: "v-model",
-                value: _vm.todo.body,
-                expression: "todo.body"
-              }
-            ],
-            staticClass: "form-control",
-            attrs: { rows: "10", required: "" },
-            domProps: { value: _vm.todo.body },
-            on: {
-              input: function($event) {
-                if ($event.target.composing) {
-                  return
-                }
-                _vm.$set(_vm.todo, "body", $event.target.value)
-              }
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c(
-          "button",
-          {
-            staticClass: "btn btn-xs btn-primary",
-            attrs: { type: "submit", disabled: _vm.isInvalid }
-          },
-          [_vm._v("Update Todo")]
-        ),
-        _vm._v(" "),
-        _c(
-          "router-link",
-          { staticClass: "btn btn-xs btn-warning", attrs: { to: "/" } },
-          [_vm._v("Cancel")]
-        )
-      ],
-      1
-    )
-  ])
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-xs btn-primary",
+              attrs: { type: "submit", disabled: _vm.isInvalid }
+            },
+            [_vm._v("\n            Update Todo\n        ")]
+          ),
+          _vm._v(" "),
+          _c(
+            "router-link",
+            { staticClass: "btn btn-xs btn-warning", attrs: { to: "/" } },
+            [_vm._v("Cancel")]
+          )
+        ],
+        1
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -56744,7 +56801,7 @@ var render = function() {
                       ? _c(
                           "router-link",
                           {
-                            staticClass: "btn btn-outline-warning btn-sm",
+                            staticClass: "btn btn-outline-dark btn-sm",
                             attrs: {
                               to: {
                                 name: "Edittodo",
@@ -56851,7 +56908,7 @@ var render = function() {
         { staticClass: "btn btn-outline-dark", attrs: { to: "/" } },
         [
           _c("span", { staticClass: "fa fa-arrow-left mr-1" }),
-          _vm._v("Back to todo\n        list")
+          _vm._v("Back to todo list\n    ")
         ]
       ),
       _vm._v(" "),

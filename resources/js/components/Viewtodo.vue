@@ -1,9 +1,8 @@
 <template id="todo">
     <div>
         <router-link v-bind:to="'/'" class="btn btn-outline-dark"
-            ><span class="fa fa-arrow-left mr-1"></span>Back to todo
-            list</router-link
-        >
+            ><span class="fa fa-arrow-left mr-1"></span>Back to todo list
+        </router-link>
         <h3>{{ todo.title }}</h3>
         <h4>Descritpion :</h4>
         <br />

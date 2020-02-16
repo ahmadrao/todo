@@ -40,7 +40,7 @@
                         </router-link>
                         <router-link
                             v-if="authorize('modify', todo)"
-                            class="btn btn-outline-warning btn-sm"
+                            class="btn btn-outline-dark btn-sm"
                             v-bind:to="{
                                 name: 'Edittodo',
                                 params: { id: todo.id }
